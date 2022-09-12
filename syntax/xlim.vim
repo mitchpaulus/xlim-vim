@@ -11,8 +11,12 @@ if exists("b:current_syntax")
     finish
 endif
 
+" keywords
+syntax keyword XlimFunction sum max min
+
 syntax region XlimUnit start="{" end="}"
 
 highlight default link XlimUnit Type
+highlight default link XlimFunction Function
 
 let b:current_syntax = "xlim"
