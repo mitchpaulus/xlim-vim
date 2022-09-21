@@ -13,11 +13,13 @@ endif
 
 " keywords
 syntax keyword XlimFunction sum max min
+syntax keyword XlimKeyword if then else
 syntax region XlimUnit start="{" end="}"
 syntax region XlimComment start="--" end="$" contains=XlimComment
 syntax region XlimFile start="`" end="`"
 
 highlight default link XlimComment Comment
+highlight default link XlimKeyword Keyword
 highlight default link XlimFunction Function
 highlight default link XlimUnit Type
 highlight default link XlimFile String
