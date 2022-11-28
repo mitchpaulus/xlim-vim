@@ -12,7 +12,7 @@ if exists("b:current_syntax")
 endif
 
 " keywords
-syntax keyword XlimFunction sum max min filter sumif countif exp
+syntax keyword XlimFunction filter sum min max sumif countif ln log10 exp sin cos asin acos atan sinh cosh tanh asinh acosh atanh
 syntax keyword XlimKeyword if then else to by in val header noheader
 syntax keyword XlimBoolean true false TRUE FALSE True False
 syntax keyword XlimOperator and or
