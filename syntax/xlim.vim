@@ -16,7 +16,7 @@ syntax keyword XlimFunction filter sum min max sumif countif ln log10 exp sin co
 syntax keyword XlimKeyword if then else to by in val header noheader template is end
 syntax keyword XlimBoolean true false TRUE FALSE True False
 syntax keyword XlimOperator and or
-syntax region XlimUnit start="{" end="}"
+syntax region XlimUnit start="\v(\{| )" end="\v(\}| )"
 syntax region XlimComment start="--" end="$" contains=XlimComment
 syntax region XlimFile start="`" end="`"
 
