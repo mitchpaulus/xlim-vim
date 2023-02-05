@@ -20,6 +20,8 @@ syntax region XlimUnit start="\v(\{| )" end="\v(\}| )"
 syntax region XlimComment start="--" end="$" contains=XlimComment
 syntax region XlimFile start="`" end="`"
 
+syntax region XlimGenOptPlaceholder start="%" end="%"
+
 syntax region XlimRegex start="r/" end="/"
 
 " Note that using \zs to start match doesn't seem to work like the lookbehind
@@ -40,5 +42,6 @@ highlight default link XlimBoolean Boolean
 highlight default link XlimUnit Type
 highlight default link XlimFile String
 highlight default link XlimRegex String
+highlight default link XlimGenOptPlaceholder Identifier
 
 let b:current_syntax = "xlim"
