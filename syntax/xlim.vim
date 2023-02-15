@@ -26,7 +26,7 @@ syntax region XlimRegex start="r/" end="/"
 
 " Note that using \zs to start match doesn't seem to work like the lookbehind
 syntax match XlimTemplateApply /\(^ *[^ ]\+ \+is \+\)\@<=[^ ]\+/
-syntax match XlimTemplateName /\(^\s*template *\)\@<=[^ ]\+/
+syntax match XlimTemplateName /\(^\s*template \+\)\@<=[^ ]\+/
 
 syntax match XlimUserFunction /\v[a-zA-Z0-9_]+\ze *:/
 
