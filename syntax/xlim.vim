@@ -19,13 +19,13 @@ syntax keyword XlimKeyword if then else to by in val header noheader template is
 syntax keyword XlimBoolean true false TRUE FALSE True False
 syntax keyword XlimOperator and or
 syntax keyword XlimLoopDefer loop defer
-syntax region XlimUnit start="\v(\{| )" end="\v(\}| )"
+syntax region XlimUnit start="\v(\{| )" end="\v(\}| |$)"
 syntax region XlimComment start="--" end="$"
 syntax region XlimFile start="`" end="`"
 
 syntax region XlimGenOptPlaceholder start="%" end="%\|$"
 
-syntax region XlimRegex start="\<r/" end="/"
+syntax region XlimRegex start="\<r/" end="/\|$"
 
 " Note that using \zs to start match doesn't seem to work like the lookbehind
 syntax match XlimTemplateApply /\(^ *[^ ]\+ \+is \+\)\@<=[^ ]\+/
