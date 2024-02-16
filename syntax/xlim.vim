@@ -19,7 +19,18 @@ syntax keyword XlimKeyword if then else to by in val header noheader template is
 syntax keyword XlimBoolean true false TRUE FALSE True False
 syntax keyword XlimOperator and or
 syntax keyword XlimLoopDefer loop defer
-syntax region XlimUnit start="\v(\{| )" end="\v(\}| |$)"
+
+" These must be before the longer match with contents.
+" This allows for strucutre units to have the intial '{' and '}' highlighted,
+" while not highlighting the other parts. Ex:
+" func_taking_struct: param { [x: {m}, y: {m}] } = param.x + param.y
+syntax match XlimUnit "{"
+syntax match XlimUnit "}"
+" Match units like { m/s }, everything between { and }, can't include newlines
+" or ':' or '[' or ']' characters, non-greedy
+syntax match XlimUnit "{[^:[]\{-}}"
+
+" syntax region XlimUnit start="\v(\{| )" end="\v(\}| |$)"
 syntax region XlimComment start="--" end="$"
 syntax region XlimFile start="`" end="`"
 
