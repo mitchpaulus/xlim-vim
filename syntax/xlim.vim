@@ -38,6 +38,8 @@ syntax region XlimGenOptPlaceholder start="%" end="%\|$"
 
 syntax region XlimRegex start="\<r/" end="/\|$"
 
+syntax region XlimString start=+"+ skip=+\\"+ end=+"\|$+
+
 " Note that using \zs to start match doesn't seem to work like the lookbehind
 syntax match XlimTemplateApply /\(^ *[^ ]\+ \+is \+\)\@<=[^ ]\+/
 syntax match XlimTemplateName /\(^\s*template \+\)\@<=[^ ]\+/
@@ -58,5 +60,6 @@ highlight default link XlimUnit Type
 highlight default link XlimFile String
 highlight default link XlimRegex String
 highlight default link XlimGenOptPlaceholder Identifier
+highlight default link XlimString String
 
 let b:current_syntax = "xlim"
