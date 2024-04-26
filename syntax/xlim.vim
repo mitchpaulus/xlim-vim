@@ -15,7 +15,7 @@ endif
 " Can use command
 " printf 'syntax keyword XlimFunction %s' (xlim --functions | textjoin ' ')
 syntax keyword XlimFunction filter sum max min min2 max2 sumif countif ln log10 exp sin cos asin acos atan sinh cosh tanh asinh acosh atanh floor ceiling abs round sqrt K C F R inv idx size
-syntax keyword XlimKeyword if then else to by in val header noheader template is end let fn import
+syntax keyword XlimKeyword if then else to by in val header noheader template is end let fn import st
 syntax keyword XlimBoolean true false TRUE FALSE True False
 syntax keyword XlimOperator and or
 syntax keyword XlimLoopDefer loop defer
